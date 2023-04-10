@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Blog</title>
+</head>
+<body>
+    <h1>Add Blog</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title">
+        <br>
+        <label for="content">Content:</label>
+        <textarea name="content" id="content"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+        <h2>{{ message }}</h2>
+    </form>
+</body>
+</html>
